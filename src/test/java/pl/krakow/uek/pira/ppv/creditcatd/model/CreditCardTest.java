@@ -15,4 +15,19 @@ public class CreditCardTest {
         //Assert //then //expect
         Assert.assertTrue(card.getLimit().equals(BigDecimal.valueOf(CREDIT_CARD_LIMIT)));
     }
+    @Test
+    public void isVerifyMinimumCreditValue() {
+        //Arrange
+        CreditCard card = new CreditCard("23423423432");
+        //Act
+        card.assignLimit(BigDecimal.valueOf(CREDIT_CARD_LIMIT));
+        //Assert
+        try {
+            card.assignLimit(BigDecimal.valueOf(50));
+            Assert.fail("Exception should be thrown");
+        }
+        catch (creditBelowMinimumException e) {
+            Assert.assertTrue(true);
+        }
+    }
 }

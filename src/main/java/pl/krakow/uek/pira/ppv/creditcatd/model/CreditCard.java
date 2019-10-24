@@ -10,6 +10,9 @@ public class CreditCard {
     }
 
     public void assignLimit(BigDecimal limit) {
+        if (BigDecimal.valueOf(100).compareTo(limit) == 1) {
+            throw new creditBelowMinimumException();
+        }
         this.limit = limit;
     }
 
