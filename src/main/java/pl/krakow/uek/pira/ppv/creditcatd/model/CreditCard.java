@@ -2,7 +2,7 @@ package pl.krakow.uek.pira.ppv.creditcatd.model;
 
 import java.math.BigDecimal;
 
-public class CreditCard {
+class CreditCard {
     private String cardNumber;
     private BigDecimal limit;
     private BigDecimal balance;
