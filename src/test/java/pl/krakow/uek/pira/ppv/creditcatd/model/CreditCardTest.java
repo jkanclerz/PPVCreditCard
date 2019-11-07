@@ -30,4 +30,22 @@ public class CreditCardTest {
             Assert.assertTrue(true);
         }
     }
+    @Test
+    public void withdrawFromCard(){
+        CreditCard card1 = new CreditCard("1234-5678");
+        CreditCard card2 = new CreditCard("1234-5679");
+        card1.assignLimit(BigDecimal.valueOf(1000));
+        card2.assignLimit(BigDecimal.valueOf(1000));
+        card1.withdraw(BigDecimal.valueOf(500));
+        card2.withdraw(BigDecimal.valueOf(100));
+        Assert.assertEquals(BigDecimal.valueOf(500),card1.getCurrentBalance());
+        Assert.assertEquals(BigDecimal.valueOf(900),card2.getCurrentBalance());
+    }
+    @Test(expected = NotEnoughMoneyException.class)
+    public void denyWithdrawBelowCurrentBalance() {
+        CreditCard card = new CreditCard("123456667");
+        card.assignLimit(BigDecimal.valueOf(1000));
+        card.assignLimit(BigDecimal.valueOf(600));
+        card.assignLimit(BigDecimal.valueOf(400));
+    }
 }
