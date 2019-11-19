@@ -28,7 +28,7 @@ public class CreditCardApiTest {
         Assert.assertEquals(expectedBalance, loaded.getCurrentBalance());
     }
     private void thereIsCCApi() {
-        api = new CreditCardFacade(this.inCCStorage);
+        api = new CreditCardFacade();
     }
 
     private void thereIsCreditCard() {
