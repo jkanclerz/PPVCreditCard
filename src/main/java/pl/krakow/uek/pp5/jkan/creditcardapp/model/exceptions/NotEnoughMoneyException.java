@@ -1,5 +1,4 @@
-package pl.krakow.uek.pira.ppv.creditcatd.model;
+package pl.krakow.uek.pp5.jkan.creditcardapp.model.exceptions;
 
 public class NotEnoughMoneyException extends IllegalStateException {
-
 }
