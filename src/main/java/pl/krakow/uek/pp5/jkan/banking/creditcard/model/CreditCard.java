@@ -1,7 +1,7 @@
-package pl.krakow.uek.pp5.jkan.creditcardapp.model;
+package pl.krakow.uek.pp5.jkan.banking.creditcard.model;
 
-import pl.krakow.uek.pp5.jkan.creditcardapp.model.exceptions.CreditBelowMinimumValueException;
-import pl.krakow.uek.pp5.jkan.creditcardapp.model.exceptions.NotEnoughMoneyException;
+import pl.krakow.uek.pp5.jkan.banking.creditcard.model.exceptions.CreditBelowMinimumValueException;
+import pl.krakow.uek.pp5.jkan.banking.creditcard.model.exceptions.NotEnoughMoneyException;
 
 import java.math.BigDecimal;
 
